@@ -1,0 +1,12 @@
+echo "Enter any character: "
+    read ch
+
+    if [ $ch -ge 'a' -a $ch -le 'z' -a $ch -ge 'A' -a $ch -le 'Z' ]
+    then
+    echo " $ch is alphabet."
+    elif [ $ch -ge '0' -a $ch -le '9' ]
+    then
+    echo " $ch is digit "
+    else
+    echo " $ch is special character "
+    fi

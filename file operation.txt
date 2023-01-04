@@ -1,0 +1,16 @@
+echo "enter the file name"
+read file
+echo "enter the file operation to be performed;
+read- read the file
+write- write in the file
+permission- to change the permission of the file
+remove- to remove the file"
+read op
+case $op in
+read)sh $file;;
+write)vi $file;;
+permission)echo "enter the permission"
+read mod
+chmod $mod $file;;
+remove)rm $file;;
+esac

@@ -1,0 +1,19 @@
+echo "enter the temperature in centigrade"
+read t
+
+if [ $t -le 0 ];
+then
+echo " freezing "
+elif [ $t -ge 10 -a $t -lt 20 ]
+then
+echo " very cold"
+elif [ $t -ge 20 -a $t -lt 30 ]
+then
+echo " normal"
+elif [ $t -ge 30 -a $t -lt 40 ]
+then
+echo " hot "
+elif [ $t -ge 40 ]
+then
+echo "very hot "
+fi

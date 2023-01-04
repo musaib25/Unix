@@ -1,0 +1,39 @@
+echo "Input Customer ID"
+read custid
+echo "Input the name of the customer"
+read connm
+echo "Input the unit consumed by the customer"
+read conu
+if [ $conu -lt 200 ]
+then
+chg=1.2
+echo "$chg"
+elif [ $conu -ge 200 -a $conu -lt 400 ]
+then
+chg=1.5
+echo "$chg"
+elif [ $conu -ge 400 -a $conu -lt 600 ]
+then
+chg=1.8
+echo "$chg"
+else
+chg=2
+echo "$chg"
+fi
+$gramt= `expr $coun /* $chg`
+if [ $gramt -lt 300 ]
+then
+$surchg= `expr $gramt /* 15/100`
+$netamt= `expr $gramt + $surchg`
+fi
+if [ $netamt  -lt 100 ]
+then
+$netamt=100;
+fi
+echo "Electricity bill"
+echo "Customer IDNO is $custid"
+echo "Customer Name is $connm"
+echo "unit Consumed is $conu"
+echo "Amount Charges @Rs. %4.2f  per unit $chg $gramt"
+echo "Surchage Amount is $surchg "
+echo "Net Amount Paid By the Customer is $netamt "

@@ -1,0 +1,26 @@
+echo "Eligibility Criteria"
+   echo "Marks in Maths >=65"
+   echo "and Marks in Phy >=55"
+   echo "and Marks in Chem>=50"
+   echo "and Total in all three subject >=190"
+   echo "or Total in Maths and Physics >=140"
+   echo "-------------------------------------"
+
+   echo "Input the marks obtained in Physics"
+   read p
+   echo "Input the marks obtained in Chemistry"
+   read c
+   echo "Input the marks obtained in Mathematics"
+   read m
+total1=`expr $p + $m + $c`
+total2=`expr $m + $p`
+   echo "Total marks of Maths, Physics and Chemistry"
+   echo "$total1"
+   echo "Total marks of Maths and Physics"
+   echo "$total2"
+if [ $m -ge 65 -a $p -ge 55 -a $c -ge 50 -a $total1 -ge 190 -a $total2 -ge 140 ];
+then
+echo "The  candidate is eligible for admission"
+else
+echo "The candidate is not eligible"
+fi

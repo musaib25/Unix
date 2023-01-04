@@ -1,0 +1,17 @@
+echo " ENTER ANY TWO NUMBERS"
+read a;
+read b;
+
+echo "enter the operation to be used"
+echo "a addition"
+echo "s sub"
+echo "m mul"
+echo "d div"
+read o;
+case $o in
+        a) echo `expr $a + $b`;;
+        s) echo `expr $a - $b`;;
+        m) echo `expr $a \* $b`;;
+        d) echo `expr $a / $b`;;
+        *) echo "Wrong";;
+esac
